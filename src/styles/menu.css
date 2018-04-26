@@ -1,0 +1,17 @@
+.topo{
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 0;
+}
+nav>ul{
+  display: flex;
+}
+nav>ul>li{
+  list-style: none;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+nav>ul>li>a{
+  text-decoration: none;
+  color: #44b7e8;
+}
