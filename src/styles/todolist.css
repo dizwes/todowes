@@ -23,42 +23,44 @@
   display: flex;
   margin: 0 .5rem;
   font-size: 12px;
-  height: 25px;
+  height: 35px;
 }
 .sucess{
   display: flex;
   align-items: center;
   justify-content: center;
   padding: .3rem;
-  color: white;
-  background: rgb(6, 241, 112);
+  color: #44b7e8;
+  background: transparent;
   border-radius: 2px;
-  width: 25px;
-  height: 25px;
-  margin: 0 .2rem;
+  width: 35px;
+  height: 35px;
+  margin: 0 .1rem;
+  font-size: 20px;
 }
 .pending{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: .3rem;
-  color: white;
-  background: rgb(241, 71, 6);
+  color: #44b7e8;
+  background: transparent;
   border-radius: 2px;
-  width: 25px;
-  height: 25px;
-  margin: 0 .2rem;
+  width: 35px;
+  height: 35px;
+  margin: 0 .1rem;
+  font-size: 20px;
 }
 .delete{
   display: flex;
   align-items: center;
   justify-content: center;
   padding: .3rem;
-  color: white;
-  background: rgb(206, 0, 0);
+  color: #44b7e8;
+  background: transparent;
   border-radius: 2px;
-  width: 25px;
-  height: 25px;
-  margin: 0 .2rem;
+  width: 35px;
+  height: 35px;
+  margin: 0 .1rem;
+  font-size: 20px;
 }
 
