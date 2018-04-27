@@ -15,7 +15,9 @@ input#description {
   color: #44b7e8;
   font-size: 14px;
 }
-
+.buttons{
+  display: flex;
+}
 .buttons>button {
   padding: .6rem;
   background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);

@@ -14,16 +14,23 @@ export default class Todo extends Component {
 
     this.handleChange = this.handleChange.bind(this)
     this.handleAdd = this.handleAdd.bind(this)
+    this.handleSearch = this.handleSearch.bind(this)
     this.handleRemove = this.handleRemove.bind(this)
     this.handleMarkAsDone = this.handleMarkAsDone.bind(this)
     this.handleMarkAsPending = this.handleMarkAsPending.bind(this)
+    this.handleClear = this.handleClear.bind(this)
 
     this.refresh()
   }
 
-  refresh(){
-    axios.get(`${URL}?sort=-createdAt`)
-    .then(resp => this.setState({...this.state, description: '', list: resp.data}))
+  refresh(description = ''){
+    const search = description  ? `&description__regex=/${description}/` : ''
+    axios.get(`${URL}?sort=-createdAt${search}`)
+    .then(resp => this.setState({...this.state, description, list: resp.data}))
+  }
+
+  handleSearch(){
+    this.refresh(this.state.description)
   }
 
   handleChange(e){
@@ -38,17 +45,21 @@ export default class Todo extends Component {
 
   handleRemove(todo){
     axios.delete(`${URL}/${todo._id}`)
-    .then(resp => this.refresh())
+    .then(resp => this.refresh(this.state.description))
   }
 
   handleMarkAsDone(todo){
     axios.put(`${URL}/${todo._id}`, {...todo, done: true})
-    .then(resp => this.refresh())
+    .then(resp => this.refresh(this.state.description))
   }
 
   handleMarkAsPending(todo){
     axios.put(`${URL}/${todo._id}`, {...todo, done: false})
-    .then(resp => this.refresh())
+    .then(resp => this.refresh(this.state.description))
+  }
+
+  handleClear(){
+    this.refresh()
   }
 
   render(){
@@ -57,12 +68,20 @@ export default class Todo extends Component {
         <h1>Atividades</h1>
         < TodoForm description={this.state.description}
           handleChange={this.handleChange}
-          handleAdd={this.handleAdd}/>
+          handleAdd={this.handleAdd}
+          handleSearch={this.handleSearch}
+          handleClear={this.handleClear}/>
         < TodoList list={this.state.list}
           handleRemove={this.handleRemove}
           handleMarkAsDone={this.handleMarkAsDone}
           handleMarkAsPending={this.handleMarkAsPending}
         />
+        <footer>
+          <p>Pressione Enter para adicionar um ToDo</p>
+          <p>Pressione Shift + Enter para pesquisar</p>
+          <p>Pressione ESC para sair da pesquisa</p>
+          <p>Developed by <a href="http://www.oliveirawesley.com.br">Oliveira Wesley</a></p>
+        </footer>
       </div>
     )
   }

@@ -3,16 +3,20 @@ import '../styles/about.css'
 
 export default props => (
   <div className="about">
-    <h1>About this project</h1>
+    <h1>Um pouco sobre este projeto...</h1>
     <div className="text">
-      <p>Lorem ipsum pretium convallis ultricies nam sed, vivamus cras vivamus magna venenatis duis id, euismod mollis neque auctor
-        malesuada. phasellus nunc augue tempor erat litora orci vulputate litora, libero consequat purus id molestie vestibulum
-        eget nam arcu, interdum pharetra quisque imperdiet orci sodales vehicula. ut ultricies class etiam ornare donec pharetra
-        nibh, ad eget mattis in hac pretium lectus lorem, rutrum placerat vestibulum urna vehicula varius. venenatis odio justo
-        vel volutpat proin commodo, sapien nisl ac habitant in cubilia bibendum, rutrum litora malesuada ullamcorper etiam. metus
-        diam luctus erat himenaeos etiam himenaeos ligula suspendisse dictumst sagittis fusce, vitae vivamus duis hac aliquet
-        leo tellus convallis sollicitudin nisl luctus praesent, metus nulla libero gravida inceptos platea lobortis eleifend
-        at convallis. </p>
+      <p>Projeto criado utilizando ReactJS, API em Node e banco de dados MongoDB. Com esta atividade resolvi juntar o útil ao agradavél
+        deixando as anotações de minhas atividades e metas diárias do bloco de notas manuscrito para uma aplicação onde
+        eu pudesse listar todas as atividades, marcar como resolvidas conforme fosse resolvendo-as e excluíndo todas
+        estas ao final do dia.
+        Aprendi bastante durante a execução do projeto errei, refiz, deu erro de novo, tentei novamente e acertei muitas vezes. Está é a versão 1.0 qual
+        será refatorada afim de implantar o Redux.
+        Obrigado por visitar este projeto dúvidas, angustias e afliações? Fale comigo!
+        Oliveira Wesley.
+      </p>
       </div>
+      <footer>
+      <p>Developed by <a href="http://www.oliveirawesley.com.br">Oliveira Wesley</a></p>
+      </footer>
   </div>
 )
