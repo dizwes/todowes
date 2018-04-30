@@ -23,11 +23,11 @@ export default class Todo extends Component {
     this.refresh()
   }
 
-  refresh(description = ''){
-    const search = description  ? `&description__regex=/${description}/` : ''
+  refresh(description = '') {
+    const search = description ? `&description__regex=/${description}/` : ''
     axios.get(`${URL}?sort=-createdAt${search}`)
     .then(resp => this.setState({...this.state, description, list: resp.data}))
-  }
+    }
 
   handleSearch(){
     this.refresh(this.state.description)
@@ -78,6 +78,8 @@ export default class Todo extends Component {
         />
         <footer>
           <p>Pressione Enter para adicionar um ToDo</p>
+          <p>Pressione Shift + Enter para pesquisar</p>
+          <p>Pressione ESC para sair da pesquisa</p>
           <p>Developed by <a href="http://www.oliveirawesley.com.br">Oliveira Wesley</a></p>
         </footer>
       </div>
