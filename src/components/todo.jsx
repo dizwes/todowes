@@ -5,7 +5,7 @@ import '../styles/todo.css'
 import TodoForm from './todoform'
 import TodoList from './todolist'
 
-const URL = 'http://localhost:3003/api/todos'
+const URL = 'https://api-todowes.herokuapp.com/api/todos'
 
 export default class Todo extends Component {
   constructor(props){
@@ -78,8 +78,6 @@ export default class Todo extends Component {
         />
         <footer>
           <p>Pressione Enter para adicionar um ToDo</p>
-          <p>Pressione Shift + Enter para pesquisar</p>
-          <p>Pressione ESC para sair da pesquisa</p>
           <p>Developed by <a href="http://www.oliveirawesley.com.br">Oliveira Wesley</a></p>
         </footer>
       </div>
