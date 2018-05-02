@@ -1,18 +1,20 @@
 .todolist {
-  width: 100%;
-  padding: 1rem 10rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 90%;
+display: flex;
+justify-content: flex-start;
+flex-direction: column;
+align-items: center;
+min-height: 60vh;
 }
 .todoitem {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: .5rem 0;
+    width: 81%;
+    padding: .5rem  ;
     border-bottom: 1px solid rgba(3, 163, 255, 0.1);
+}
+.todoitem>p{
+  padding: 0 1rem;
 }
 .todoitem:last-child{
   border-bottom: none;

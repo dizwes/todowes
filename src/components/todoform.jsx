@@ -16,8 +16,6 @@ export default props => {
           onKeyUp={keyHandler}
           placeholder='Adicione uma tarefa' value={props.description}/>
     <div className="buttons">
-    <button onClick={props.handleAdd}>Adicionar</button>
-    <button onClick={props.handleSearch}>Pesquisar</button>
     </div>
   </div>
   )
