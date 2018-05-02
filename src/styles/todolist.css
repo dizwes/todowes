@@ -36,8 +36,8 @@ min-height: 60vh;
   color: #44b7e8;
   background: transparent;
   border-radius: 2px;
-  width: 35px;
-  height: 35px;
+  min-width: 35px;
+  min-height: 35px;
   font-size: 20px;
 }
 .sucess:hover{
@@ -50,8 +50,8 @@ min-height: 60vh;
   color: #44b7e8;
   background: transparent;
   border-radius: 2px;
-  width: 35px;
-  height: 35px;
+  min-width: 35px;
+  min-height: 35px;
   font-size: 20px;
 }
 .pending:hover{
@@ -65,11 +65,22 @@ min-height: 60vh;
   color: #44b7e8;
   background: transparent;
   border-radius: 2px;
-  width: 35px;
-  height: 35px;
+  min-width: 35px;
+  min-height: 35px;
   font-size: 20px;
 }
 .delete:hover{
   font-size: 23px;
+}
+
+@media screen and (max-width: 414px) {
+  .todoitem>p{
+    padding: 0;
+    font-size: 14px;
+  }
+  .sucess, .pending, .delete{
+    min-width: 30px;
+    min-height: 30px;
+  }
 }
 
